@@ -1,1 +1,130 @@
-# Automated_Request_Management_System
+Automated Request Management System
+Project Overview
+This project implements a desktop application designed to streamline and digitalize internal request management processes for POLINA GROUP HOLDING. It replaces traditional manual request methods (e.g., paper forms, emails) with an automated system for submission, tracking, and approval. The application provides distinct interfaces for regular users (employees) and administrators, enhancing efficiency, transparency, and data management within the organization.
+
+Features
+User Module
+Secure Login: Users authenticate using their unique matricule, validated against an existing dataset.
+
+Dynamic Form Selection: Users can choose from various types of request forms (e.g., Access Distance, Cle 3G, External Drive, Gravure, Internet Access) via a dropdown menu.
+
+Request Submission: Users fill out and submit their chosen forms. All submitted data is captured and saved.
+
+Request Status Tracking: Users can view a history of their submitted requests, including their current status (Pending, Approved, Rejected), the processing administrator's name, and the decision date.
+
+Administrator Module
+Secure Login: Administrators authenticate using their unique matricule, validated against a dataset.
+
+Centralized Dashboard: View all pending requests in a tabular format.
+
+Request Processing: Easily "Accept" or "Reject" requests directly from the table.
+
+Automatic Recording: Records the administrator's matricule and the decision date automatically upon approval/rejection.
+
+Detailed View: For any request, administrators can open a separate dialog to view all submitted fields (only displaying fields that contain data, avoiding clutter).
+
+Persistent Changes: All status updates are saved back to the central data file.
+
+Technologies Used
+Python 3.x: The core programming language for application logic.
+
+PyQt6: The robust GUI framework for building rich desktop user interfaces.
+
+Qt Designer: Used for visually designing the .ui files for application interfaces.
+
+Pandas: A powerful library for efficient data manipulation, reading, and writing CSV files.
+
+Project Structure
+your_project_folder/
+├── login.py                  # Main application entry point (handles user/admin login)
+├── user.py                   # User-facing application logic (form selection, submission)
+├── user_requests_manager.py  # Handles loading & displaying user-specific requests
+├── admin.py                  # Administrator-facing application logic (view, approve/reject requests)
+├── requests_pending.csv      # Stores all pending requests (read/written by user/admin modules)
+├── requests_archive.csv      # (Optional) Stores processed/archived requests
+├── Table user.csv            # Contains user/admin matricules and names (for login/admin name lookup)
+├── ui/                       # Directory for all Qt Designer .ui files
+│   ├── login.ui              # Login screen UI
+│   ├── user.ui               # Main user dashboard UI (form container, dropdown)
+│   ├── my_requests_view.ui   # User's request history view UI (table)
+│   ├── admin.ui              # Admin dashboard UI (requests table)
+│   ├── confirmation.ui       # (Optional) Confirmation dialog UI
+│   ├── grauve.ui             # Specific form UI for "Fiche demande de grauve"
+│   ├── cle3g.ui              # Specific form UI for "Fiche d'engagement clé 3g"
+│   ├── internet.ui           # Specific form UI for "Fiche d'engagement d'accés internet"
+│   ├── fishe.ui              # Specific form UI for "Demande d'octroi d'un accés a distance"
+│   └── externaldrive.ui      # Specific form UI for "Engagement pour déverrouillage d'un lecteru disc"
+└── styles/                   # Directory for Qt Style Sheets (.qss files)
+    ├── app_style.qss         # Global application styling (dark theme)
+    └── admin_details_style.qss # Specific styling for Admin's Request Details dialog
+
+Setup and Installation
+Clone/Download the Project:
+Obtain all project files and place them in a designated folder on your system (e.g., C:\YourProjects\polina).
+
+Python Environment:
+Ensure you have Python 3.x installed. It is highly recommended to use a virtual environment:
+
+python -m venv venv
+.\venv\Scripts\activate  # On Windows
+source venv/bin/activate # On macOS/Linux
+
+Install Dependencies:
+Navigate to your project's root directory in your terminal (where login.py is located) and install the required Python libraries:
+
+pip install pandas pyqt6
+
+Prepare Data and UI Files:
+
+Ensure all .ui files are placed in the ui/ subfolder.
+
+Ensure app_style.qss and admin_details_style.qss are in the styles/ subfolder.
+
+Place requests_pending.csv, requests_archive.csv (can be empty initially, will be created/updated by app), and Table user.csv directly in the project's root folder.
+
+Important for Table user.csv: This file must contain columns named Matricule_Responsable (for admin IDs) and Nom_Prenom_Responsable (for admin names).
+
+Usage
+Run the Application:
+Open your terminal or command prompt, navigate to the project's root directory, and run the main login script:
+
+python login.py
+
+User Login:
+
+Enter a user's matricule (from Table user.csv).
+
+Upon successful login, the User Dashboard will appear.
+
+User Dashboard:
+
+Submit Request: Select a form type from the dropdown, fill in the details, and click the "Submit" button. The request will be saved to requests_pending.csv.
+
+View My Requests: Click the "View My Requests" button to open a separate window displaying all your submitted requests and their current statuses (Pending, Approved, Rejected), including the Admin's Name and Decision Date.
+
+Administrator Login:
+
+Enter an administrator's matricule (from Table user.csv, specifically the Matricule_Responsable column).
+
+Upon successful login, the Admin Dashboard will appear.
+
+Administrator Dashboard:
+
+View all pending requests.
+
+For each request, you'll see "Accept" and "Reject" buttons in the "Action" column.
+
+Click "Accept" or "Reject" to change the request's status. The logged-in admin's matricule and the current date will be recorded automatically.
+
+Click "Save Changes" to persist all modifications to requests_pending.csv.
+
+Click the "View Details" button for any request to open a dialog showing all filled-in fields for that request.
+
+Data Files
+requests_pending.csv: Stores all active/pending requests. Managed by both user (submission) and admin (status update) modules.
+
+requests_archive.csv: (Optional) Can be used to store requests once they are fully processed (e.g., moved from requests_pending.csv by an admin process not explicitly covered here).
+
+Table user.csv: Contains the master list of user/admin matricules and names. Used for login validation and admin name lookup.
+
+Feel free to expand upon any section with more detail, specific examples, or additional screenshots as needed.
