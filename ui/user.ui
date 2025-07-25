@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>807</width>
+    <height>635</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Demande d'accès</string>
+  </property>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>731</width>
+     <height>541</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>Choisir votre formulaire</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="viewMyRequests_pushButton">
+      <property name="text">
+       <string>Voir votre requetes</string>
+      </property>
+     </widget>
+    </item>
+    <item alignment="Qt::AlignmentFlag::AlignTop">
+     <widget class="QComboBox" name="comboBox">
+      <item>
+       <property name="text">
+        <string>choisissez</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Fiche demande de grauve</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Fiche d'engagement clé 3g</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Fiche d'engagement d'accés internet</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Demande d'octroi d'un accés a distance</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Engagement pour déverrouillage d'un lecteru disc</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string/>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="form_container" native="true"/>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

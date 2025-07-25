@@ -1,0 +1,86 @@
+/* General styling for the RequestDetailsDialog window */
+QDialog {
+    background-color: #2b2b2b; /* Dark background for the dialog itself */
+    border: 1px solid #4a4a4a; /* Subtle border that blends with dark theme */
+    border-radius: 12px; /* Nicely rounded corners */
+    padding: 20px; /* More internal spacing for a cleaner look */
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3); /* More pronounced shadow for depth on dark theme */
+}
+
+/* Style for the main scroll area content widget inside the dialog */
+QDialog QWidget#scroll_area_content {
+    background-color: #333333; /* Slightly lighter dark background for content area */
+    border-radius: 10px;
+    padding: 25px; /* Generous padding inside the content box */
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); /* Subtle inner shadow */
+}
+
+/* Style for field labels (e.g., "Request ID:", "Form Type:") */
+QDialog QLabel {
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    font-size: 15px; /* Slightly larger font for labels */
+    color: #e0e0e0; /* Light gray for labels (high contrast on dark) */
+    padding: 8px 0; /* Vertical padding */
+    margin-right: 15px; /* Space between label and value */
+    font-weight: bold; /* Bold for emphasis */
+    qproperty-alignment: AlignLeft | AlignVCenter;
+}
+
+/* Style for the actual values (e.g., "c0a4b07f-7c3c-4995-8944-959368d52d54") */
+QDialog QLabel:!has-buddy {
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    font-size: 14px;
+    color: #bbbbbb; /* Lighter gray for values, clear but not too bright */
+    background-color: #3a3a3a; /* Darker background for value boxes */
+    border: 1px solid #5a5a5a; /* Clearer border for value boxes */
+    border-radius: 8px; /* Rounded value boxes */
+    padding: 10px 15px; /* Increased padding inside the value box for comfort */
+    min-height: 35px; /* Ensure consistent height for all value fields */
+    vertical-align: middle;
+    qproperty-alignment: AlignLeft | AlignVCenter;
+}
+
+/* Style for QTextEdit widgets (used for long text fields like motifs or descriptions) */
+QDialog QTextEdit {
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    font-size: 13px;
+    color: #dddddd; /* Light text for readability */
+    background-color: #3a3a3a; /* Dark background for text areas */
+    border: 1px solid #5a5a5a;
+    border-radius: 8px;
+    padding: 12px; /* Good padding for text content */
+    selection-background-color: #007bff; /* Standard blue selection */
+    min-height: 100px; /* Default height for text fields */
+}
+
+/* Style for the separator line (e.g., "--------------------------------------------------") */
+QDialog QLabel[text*="--------------------------------------------------"] {
+    background-color: #606060; /* Medium gray line for visibility on dark */
+    min-height: 1px;
+    max-height: 1px;
+    margin: 20px 0; /* More vertical space around the separator */
+    border: none;
+    border-radius: 0;
+}
+
+/* General button styling (if any buttons are added to the dialog later) */
+QDialog QPushButton {
+    background-color: #7f52b8; /* Using the same purple from your main theme for consistency */
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 15px; /* Space above buttons */
+}
+
+QDialog QPushButton:hover {
+    background-color: #9363d6; /* Lighter purple on hover */
+}
+
+QDialog QPushButton:pressed {
+    background-color: #6a40a0; /* Darker purple on press */
+    padding-top: 11px;
+    padding-bottom: 9px;
+}

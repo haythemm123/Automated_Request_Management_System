@@ -1,0 +1,169 @@
+/* Modern Dark Theme - Adjusted for Smaller Scale & Table Buttons (Final Tweak) */
+
+/* General Application Styles */
+QWidget {
+    background-color: #202020;
+    color: #f0f0f0;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    font-size: 13px;
+}
+
+/* Main Window Specifics */
+QMainWindow {
+    background-color: #1a1a1a;
+    border: 1px solid #333333;
+}
+
+/* Login Page Specific Overrides */
+QLabel#loginTitleLabel {
+    color: #bb86fc;
+    font-size: 28px;
+    font-weight: 900;
+    padding: 20px;
+    qproperty-alignment: AlignCenter;
+}
+
+QLabel#idLabel, QLabel {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 6px;
+}
+
+QLineEdit {
+    background-color: #303030;
+    border: 1px solid #5a5a5a;
+    border-radius: 6px;
+    padding: 8px 10px;
+    color: #ffffff;
+    selection-background-color: #0078d4;
+    font-size: 14px;
+}
+QLineEdit:focus {
+    border: 1px solid #81a1c1;
+    background-color: #383838;
+}
+
+/* --- General QPushButton STYLES --- */
+QPushButton {
+    background-color: #7f52b8;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    outline: none;
+    padding: 8px 12px;
+    min-height: 30px;
+    min-width: 60px;
+}
+QPushButton:hover {
+    background-color: #9363d6;
+}
+QPushButton:pressed {
+    background-color: #6a40a0;
+    padding-top: 9px;
+    padding-bottom: 7px;
+}
+QPushButton:disabled {
+    background-color: #404040;
+    color: #909090;
+}
+
+/* Override for larger buttons (like the Login button) by objectName */
+QPushButton#login_button {
+    padding: 15px 30px;
+    font-size: 18px;
+    min-width: 140px;
+    min-height: 40px;
+}
+
+/* --- Specific Styles for QPushButton inside QTableWidget --- */
+QTableWidget QPushButton {
+    font-size: 12px;
+    padding: 6px 8px; /* **Increased vertical padding again (from 4px to 6px)** */
+    min-height: 25px; /* **Increased min-height again (from 22px to 25px)** */
+    min-width: 50px;
+    border-radius: 5px;
+}
+QTableWidget QPushButton:hover {
+    background-color: #9363d6;
+}
+QTableWidget QPushButton:pressed {
+    background-color: #6a40a0;
+    padding-top: 7px; /* Adjusted press effect for new padding */
+    padding-bottom: 5px;
+}
+
+
+/* Status Label */
+QLabel#status_label {
+    font-size: 12px;
+    font-style: italic;
+    padding: 4px;
+    qproperty-alignment: AlignCenter;
+    color: #f0f0f0;
+}
+QLabel#status_label[is_error="true"] {
+    color: #ff5555;
+}
+QLabel#status_label[is_error="false"] {
+    color: #66ff66;
+}
+
+/* ScrollBars */
+QScrollBar:vertical, QScrollBar:horizontal {
+    border: none;
+    background: #333333;
+    width: 10px;
+    height: 10px;
+    margin: 0px;
+}
+QScrollBar::handle:vertical, QScrollBar::handle:horizontal {
+    background: #606060;
+    border-radius: 5px;
+    min-height: 20px;
+    min-width: 20px;
+}
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical,
+QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
+    border: none;
+    background: none;
+}
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical,
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {
+    background: none;
+}
+
+/* QTableWidget specific styling */
+QTableWidget {
+    background-color: #2a2a2a;
+    alternate-background-color: #333333;
+    gridline-color: #4a4a4a;
+    border: 1px solid #4a4a4a;
+    selection-background-color: #007bff;
+    color: #e0e0e0;
+    font-size: 12px;
+}
+QHeaderView::section {
+    background-color: #404040;
+    color: white;
+    padding: 8px;
+    border: 1px solid #4a4a4a;
+    font-weight: bold;
+    font-size: 13px;
+}
+QTableWidget::item {
+    padding: 6px;
+}
+QTableWidget::item:selected {
+    background-color: #007bff;
+    color: white;
+}
+QTableWidget::horizontalHeader::end::section, QTableWidget::verticalHeader::end::section {
+    border: none;
+}
+QTableWidget QTableCornerButton::section {
+    background-color: #404040;
+    border: 1px solid #4a4a4a;
+}

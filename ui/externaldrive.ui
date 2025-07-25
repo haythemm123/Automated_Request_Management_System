@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ExternalDriveUnlockForm</class>
+ <widget class="QWidget" name="ExternalDriveUnlockForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>700</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Déverrouillage de lecteur externe</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="titleLabel">
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Engagement pour déverrouillage d'un lecteur externe</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="headerLayout">
+     <item>
+      <widget class="QGroupBox" name="filialeGroup">
+       <property name="title">
+        <string>Filiale</string>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QLineEdit" name="externalDrive_filiale_lineEdit"/>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="serviceGroup">
+       <property name="title">
+        <string>Service</string>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <widget class="QLineEdit" name="externalDrive_service_lineEdit"/>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="driveGroup">
+     <property name="title">
+      <string>Type de lecteur</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_drive">
+        <property name="text">
+         <string>Lecteur</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLabel" name="label_lec_ecri">
+        <property name="text">
+         <string>Lecture Écriture</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLabel" name="label_flash">
+        <property name="text">
+         <string>Flash disque</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QLabel" name="label_cd">
+        <property name="text">
+         <string>Lecteur CD/DVD</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="4">
+       <widget class="QLabel" name="label_graveur">
+        <property name="text">
+         <string>Graveur CD/DVD</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="5">
+       <widget class="QLabel" name="label_3g">
+        <property name="text">
+         <string>Clé 3G</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QCheckBox" name="externalDrive_lecture_radio"/>
+      </item>
+      <item row="1" column="1">
+       <widget class="QCheckBox" name="externalDrive_lectureEcriture_radio"/>
+      </item>
+      <item row="1" column="2">
+       <widget class="QCheckBox" name="externalDrive_flashDisque_radio"/>
+      </item>
+      <item row="1" column="3">
+       <widget class="QCheckBox" name="externalDrive_lecteurCDDVD_radio"/>
+      </item>
+      <item row="1" column="4">
+       <widget class="QCheckBox" name="externalDrive_graveurCDDVD_radio"/>
+      </item>
+      <item row="1" column="5">
+       <widget class="QCheckBox" name="externalDrive_cle3g_radio"/>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="engagementGroup">
+     <property name="title">
+      <string>Je m'engage à :</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <widget class="QCheckBox" name="externalDrive_engagement1_checkBox">
+        <property name="text">
+         <string>Ne pas utiliser ce lecteur externe pour d'autres besoin non cités ci-dessus que ce soit professionnel ou personnels.</string>
+        </property>
+        <property name="wordWrap" stdset="0">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="externalDrive_engagement2_checkBox">
+        <property name="text">
+         <string>J'interdirais aussi l'utilisation de mon lecteur externe par tout autre utilisateur.</string>
+        </property>
+        <property name="wordWrap" stdset="0">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="externalDrive_engagement2_checkBox_2">
+        <property name="text">
+         <string>Informer le responsable informatique de la filiale en cas d'achèvement des travaux cause de cette autorisation.</string>
+        </property>
+        <property name="wordWrap" stdset="0">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="externalDrive_submit_pushButton">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>Soumettre l'engagement</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
